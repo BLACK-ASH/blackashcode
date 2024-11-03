@@ -8,9 +8,9 @@ const Navbar = async () => {
     const session = await auth();
     return (
         <nav className='flex items-center justify-between p-2'>
-            <div className='flex items-center gap-3'>
-                <Image src="/logo.png" width={60} height={30} alt='logo' />
-                <h1 className='text-3xl font-bold md:block hidden '>
+            <div className='flex items-center gap-3 w-40'>
+                <Image src="/logo.png" width={50} height={30} alt='logo' />
+                <h1 className='text-lg md:text-2xl lg:text-3xl font-bold  '>
                     BlackAsh
                     <span className='text-primary'>
                         Code
@@ -23,7 +23,7 @@ const Navbar = async () => {
                     <div className="drawer drawer-end">
                         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                         <div className="drawer-content flex items-center gap-3 w-fit">
-                            <p className='text-lg text-base-content w-fit'>{session?.user?.name}</p>
+                            <p className=' text-base-content font-bold w-fit hidden sm:block'>{session?.user?.name}</p>
                             {/* Page content here */}
                             <label htmlFor="my-drawer-4" className="drawer-button ">
                                 <Image
