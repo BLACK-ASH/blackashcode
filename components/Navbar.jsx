@@ -7,16 +7,16 @@ import Login from './Login';
 const Navbar = async () => {
     const session = await auth();
     return (
-        <nav className='flex items-center bg-base-200 glass fixed top-0 w-full justify-between p-2'>
+        <nav className='flex items-center md:w-[75%] lg:w-[60%] mx-auto  w-full justify-between p-2'>
             <div className='flex items-center gap-3 w-40'>
                 <Image src="/logo.png" width={50} height={30} alt='logo' />
-                <h1 className='text-lg md:text-2xl lg:text-3xl font-bold  '>
+                <div className='text-lg md:text-2xl lg:text-3xl font-bold  '>
                     BlackAsh
                     <span className='text-primary'>
                         Code
                     </span>
 
-                </h1>
+                </div>
             </div>
             <div className='flex gap-3'>
                 {session && session?.user ?
