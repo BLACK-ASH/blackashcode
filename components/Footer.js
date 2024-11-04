@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const Footer = () => {
     return (
         <div className='w-full md:w-[75%] lg:w-[60%] mx-auto p-2'>
@@ -16,11 +17,11 @@ const Footer = () => {
                 <div>
                     <p className=' font-bold' >Quick links</p>
                     <ul className='text-sm'>
-                        <li>Home</li>
-                        <li>Playground</li>
-                        <li>Web Builder</li>
-                        <li>Coding Problems</li>
-                        <li>Learn To Code</li>
+                        <li><Link href='/'>Home</Link></li>
+                        <li><Link href='/playground'>Playground</Link></li>
+                        <li><Link href='/web-builder'>Web Builder</Link></li>
+                        <li><Link href='/coding-problems'>Coding Problems</Link></li>
+                        <li><Link href='/learn-to-code'>Learn To Code</Link></li>
                     </ul>
                 </div>
                 <div>

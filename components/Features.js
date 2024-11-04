@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Features = () => {
     return (
@@ -16,6 +17,9 @@ const Features = () => {
                     <div className="text-sm p-3 text-center">
                         This is your ultimate coding playground that serves as a learning platform.For multiple languages.
                     </div>
+                    <button className='btn btn-primary'>
+                        <Link href="/playground">Playground</Link>
+                    </button>
                 </div>
                 <div className=" bg-base-200 rounded-md p-3 flex flex-col items-center gap-3">
                     <Image className='dark:invert' src="/icon.svg" width={50} height={50} alt='Web Builder' />
@@ -25,6 +29,9 @@ const Features = () => {
                     <div className="text-sm p-3 text-center">
                         Get started with our web builder. For development of websites.
                     </div>
+                    <button className='btn btn-primary'>
+                        <Link href="/web-builder">Web Builder</Link>
+                    </button>
                 </div>
                 <div className=" bg-base-200 rounded-md p-3 flex flex-col items-center gap-3">
                     <Image src="/problem.svg" width={50} height={50} alt='Coding Problems' />
@@ -34,15 +41,21 @@ const Features = () => {
                     <div className="text-sm p-3 text-center">
                         Get started with our coding problems. Enhance your problem solving skills.
                     </div>
+                    <button className='btn btn-primary'>
+                        <Link href="/coding-problems">Coding Problems</Link>
+                    </button>
                 </div>
                 <div className=" bg-base-200 rounded-md p-3 flex flex-col items-center gap-3">
-                    <Image src="/learn.png" width={50} height={50} alt='Learn'  />
+                    <Image src="/learn.png" width={50} height={50} alt='Learn' />
                     <div className="text-center text-2xl text-base-content">
                         Learn To Code
                     </div>
                     <div className="text-sm p-3 text-center">
                         Get started with our Learn To Code. And Lear To Code From Scratch.
                     </div>
+                    <button className='btn btn-primary'>
+                        <Link href="/learn-to-code">Learn To Code</Link>
+                    </button>
                 </div>
             </div>
         </div>
