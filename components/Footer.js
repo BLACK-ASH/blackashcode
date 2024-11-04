@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Footer = () => {
     return (
         <div className='w-full md:w-[75%] lg:w-[60%] mx-auto p-2'>
-            <div className='grid grid-cols-1 m-2 mx-4 md:grid-cols-2 xl:grid-cols-4  gap-4 '>
+            <div className='grid m-2 mx-4 grid-cols-2 lg:grid-cols-4  gap-4 '>
                 <div className='flex flex-col items-center' >
                     <div className='text-lg md:text-3xl lg:text-2xl font-bold  '>
                         BlackAsh
@@ -11,7 +11,7 @@ const Footer = () => {
                             Code
                         </span>
                     </div>
-                    <Image src="/logo.png" width={100} height={75} alt='logo' />
+                    <Image src="/logo.png" width={100} height={75} alt='logo'  />
                 </div>
                 <div>
                     <p className=' font-bold' >Quick links</p>

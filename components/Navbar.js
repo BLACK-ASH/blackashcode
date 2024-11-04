@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import { auth, signOut, signIn } from '@/auth';
-import ThemeController from './ThemeController';
 import Login from './Login';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = async () => {
     const session = await auth();
     return (
         <nav className='flex items-center md:w-[75%] lg:w-[60%] mx-auto  w-full justify-between p-2'>
             <div className='flex items-center gap-3 w-40'>
-                <Image src="/logo.png" width={50} height={30} alt='logo' />
+                <Image src="/logo.png" width={50} height={30} alt='logo'  />
                 <div className='text-lg md:text-2xl lg:text-3xl font-bold  '>
                     BlackAsh
                     <span className='text-primary'>
@@ -39,7 +39,7 @@ const Navbar = async () => {
                             <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
                             <ul className="menu bg-base-200 relative text-base-content min-h-full w-80 p-4">
                                 {/* Sidebar content here */}
-                                <div><ThemeController /></div>
+                                <div><ThemeToggle /></div>
                                 <li>{session?.user?.name}</li>
                                 <div className='bottom-3'>
                                     <form action={async () => {
@@ -55,7 +55,7 @@ const Navbar = async () => {
                     :
                     <div className='flex'>
                         <Login />
-                        <ThemeController/>
+                        <ThemeToggle/>
                     </div>
                 }
 

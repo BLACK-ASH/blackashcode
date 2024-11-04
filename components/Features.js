@@ -36,7 +36,7 @@ const Features = () => {
                     </div>
                 </div>
                 <div className=" bg-base-200 rounded-md p-3 flex flex-col items-center gap-3">
-                    <Image src="/learn.png" width={50} height={50} alt='Learn' />
+                    <Image src="/learn.png" width={50} height={50} alt='Learn'  />
                     <div className="text-center text-2xl text-base-content">
                         Learn To Code
                     </div>
