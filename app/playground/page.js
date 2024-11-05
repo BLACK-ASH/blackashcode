@@ -13,6 +13,7 @@ export default function Home() {
     const [theme, setTheme] = useState("monokai");
     const [fontSize, setFontSize] = useState(14);
 
+
     // Load settings from localStorage on the client side
     useEffect(() => {
         if (typeof window !== "undefined") {

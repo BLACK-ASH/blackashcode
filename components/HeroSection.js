@@ -1,6 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+
 const HeroSection = () => {
+
+
     return (
         <div className='md:w-[75%] lg:w-[60%] mx-auto justify-between items-center my-5 p-4 md:my-10 md:p-8 w-full max-sm:flex-col-reverse flex'>
             <div className='space-y-5 flex flex-col max-sm:items-center'>
@@ -14,8 +18,18 @@ const HeroSection = () => {
                 </h2>
                 <p className='text-accent font-bold' >Start Coding Now</p>
                 <div className='flex gap-3'>
-                    <button className='btn px-10 btn-circle w-fit btn-primary'>Playground</button>
-                    <button className='btn px-10 btn-circle w-fit btn-primary btn-outline'>Login</button>
+                    <button className='btn px-10 btn-circle w-fit btn-primary'>
+                        <Link href="/playground">
+                            Playground
+                        </Link>
+                    </button>
+
+                    <button className='btn px-10 btn-circle w-fit btn-primary'>
+                        <Link href="/web-builder">
+                            Web Builder
+                        </Link>
+                    </button>
+
                 </div>
             </div>
             <div className='w-1/2 max-sm:my-8 object-fill'>

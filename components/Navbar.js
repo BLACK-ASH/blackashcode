@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { auth, signOut, signIn } from '@/auth';
+import { auth, signOut } from '@/auth';
 import Login from './Login';
 import ThemeToggle from './ThemeToggle';
 import Link from 'next/link'
