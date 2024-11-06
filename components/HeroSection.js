@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { auth } from '@/auth';
+import Login from './Login';
 
-const HeroSection = () => {
-
+const HeroSection = async () => {
+    const session = await auth();
 
     return (
         <div className='md:w-[75%] lg:w-[60%] mx-auto justify-between items-center my-5 p-4 md:my-10 md:p-8 w-full max-sm:flex-col-reverse flex'>
@@ -24,11 +26,17 @@ const HeroSection = () => {
                         </Link>
                     </button>
 
-                    <button className='btn px-10 btn-circle w-fit btn-primary'>
-                        <Link href="/web-builder">
-                            Web Builder
-                        </Link>
-                    </button>
+                    {
+                        session && session?.user ? (
+                            <button className='btn px-10 btn-circle w-fit btn-primary btn-outline'>
+                                <Link href="/web-builder">
+                                    Web Builder
+                                </Link>
+                            </button>
+                        ) :
+                            <Login />
+                    }
+
 
                 </div>
             </div>

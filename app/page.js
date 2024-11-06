@@ -7,6 +7,7 @@ import PlayCz from "@/components/PlayCz";
 export default function Home() {
   return (
     <>
+    
       <HeroSection />
       <Divider />
       <Language />

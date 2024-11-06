@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Navbar = async () => {
     const session = await auth();
     return (
-        <nav className='flex items-center md:w-[75%] lg:w-[60%] mx-auto  w-full justify-between p-2'>
+        <nav className='flex items-center z-50 md:w-[75%] lg:w-[60%] mx-auto  w-full justify-between p-2'>
             <div className='flex items-center gap-3 w-40'>
                 <Image src="/logo.png" width={50} height={30} alt='logo' />
                 <div className='text-lg md:text-2xl lg:text-3xl font-bold  '>
@@ -21,7 +21,7 @@ const Navbar = async () => {
             </div>
             <div className='flex gap-3'>
                 {session && session?.user ?
-                    <div className="drawer drawer-end">
+                    <div className="drawer z-50 drawer-end">
                         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                         <div className="drawer-content flex items-center gap-3 w-fit">
                             <p className=' text-base-content font-bold w-fit hidden sm:block'>{session?.user?.name}</p>
@@ -36,9 +36,9 @@ const Navbar = async () => {
                                 />
                             </label>
                         </div>
-                        <div className="drawer-side">
+                        <div className="z-50 drawer-side">
                             <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                            <ul className="menu bg-base-200 relative text-base-content min-h-full w-80 p-4">
+                            <ul className="menu z-50 bg-base-200 relative text-base-content min-h-full w-80 p-4">
                                 {/* Sidebar content here */}
                                 <div className='absolute top-3 right-7'><ThemeToggle /></div>
                                 <Image
@@ -71,8 +71,8 @@ const Navbar = async () => {
                     </div>
                     :
                     <div className='flex'>
-                        <Login />
                         <ThemeToggle />
+                        <Login />
                     </div>
                 }
 

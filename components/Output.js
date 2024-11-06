@@ -46,9 +46,9 @@ const Output = ({ code, version, language }) => {
             </div>
             <div className='w-full my-6 mx-auto h-1 bg-primary '></div>
             <h3 className='text-2xl m-1'>Output:</h3>
-            <div className='bg-base-300 rounded-md p-3 h-[50vh] overflow-auto '>
-                <pre>{outputResult?.stdout ? outputResult.stdout.split('\n').map((line, index) => <p className='text-wrap' key={index}>{line}</p>) : ''}</pre>
-                <pre>{outputResult?.stderr ? outputResult.stderr.split('\n').map((line, index) => <p className='text-error text-wrap' key={index}>{line}</p>) : ''}</pre>
+            <div className='bg-base-300 text-base-content rounded-md p-3 h-[50vh] overflow-x-auto '>
+                <pre>{outputResult?.stdout ? outputResult.stdout.split('\n').map((line, index) => <p className='text-wrap break-words ' key={index}>{line}</p>) : ''}</pre>
+                <pre>{outputResult?.stderr ? outputResult.stderr.split('\n').map((line, index) => <p className='text-error text-wrap break-words' key={index}>{line}</p>) : ''}</pre>
             </div>
         </>
     );

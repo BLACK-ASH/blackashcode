@@ -6,6 +6,7 @@ import Output from "@/components/Output";
 import PlayNav from "@/components/PlayNav";
 import { useState, useEffect } from "react";
 
+
 export default function Home() {
     const [language, setLanguage] = useState("javascript");
     const [version, setVersion] = useState("18.15.0");
@@ -51,6 +52,7 @@ export default function Home() {
 
     return (
         <div className="p-4 min-h-screen">
+           
             <PlayNav
                 language={language}
                 setLanguage={setLanguage}
